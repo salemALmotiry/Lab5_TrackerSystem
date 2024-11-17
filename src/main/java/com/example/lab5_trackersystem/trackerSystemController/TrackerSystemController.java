@@ -20,8 +20,11 @@ public class TrackerSystemController {
 
     @PostMapping("/new")
     public ApiResponse createProject(@RequestBody Project project) {
-        if (projects.contains(project)) {
-            return new ApiResponse("Project already exists");
+
+        for (Project p : projects) {
+            if (p.getID() == project.getID()) {
+                return new ApiResponse("Project already exists");
+            }
         }
 
         if (project.getStatus().equalsIgnoreCase("done") || project.getStatus().equalsIgnoreCase("not done")) {
@@ -53,6 +56,7 @@ public class TrackerSystemController {
         return new ApiResponse("Project deleted");
 
     }
+
 
     @PutMapping("/update-status/{index}")
     public ApiResponse changeStatus(@PathVariable int index) {
