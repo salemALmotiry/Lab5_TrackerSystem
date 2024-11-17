@@ -5,7 +5,13 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Model {
+public class Project {
 
-    
+    private int ID;
+    private String title;
+    private String description;
+    private String status;
+    private String companyName;
+
+
 }

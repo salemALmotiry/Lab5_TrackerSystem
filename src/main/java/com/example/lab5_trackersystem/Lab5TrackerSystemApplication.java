@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Lab5TrackerSystemApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Lab5TrackerSystemApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Lab5TrackerSystemApplication.class, args);
+    }
 
 }
