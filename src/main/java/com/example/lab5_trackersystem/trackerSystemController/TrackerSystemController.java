@@ -18,7 +18,7 @@ public class TrackerSystemController {
         return projects;
     }
 
-    @PostMapping("/create")
+    @PostMapping("/new")
     public ApiResponse createProject(@RequestBody Project project) {
         if (projects.contains(project)) {
             return new ApiResponse("Project already exists");
